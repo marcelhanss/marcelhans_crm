@@ -8,8 +8,6 @@
         <h1>Halo Bos!</h1>
     @endif
 
-
-
     <h2>CRM PT Smart</h2>
     <h1>Selamat Datang, {{ Auth::user()->name }}!</h1>
 
