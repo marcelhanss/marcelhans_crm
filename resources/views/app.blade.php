@@ -8,15 +8,17 @@
         <h1>Halo Bos!</h1>
     @endif
 
-    @if(Auth::user()->role !== 'manager')
-        <h1>Halo Sales!</h1>
-    @endif
+
 
     <h2>CRM PT Smart</h2>
     <h1>Selamat Datang, {{ Auth::user()->name }}!</h1>
 
     <nav>
-        <a href="/leads">Leads</a> |
+            @if(Auth::user()->role !== 'manager')
+                <h1>Halo Sales!</h1>
+                 <a href="/leads">Leads</a> |
+            @endif
+       
         <a href="/products">Products</a> |
         <a href="/projects">Projects</a> |
         <a href="/customers">Customers</a> |
