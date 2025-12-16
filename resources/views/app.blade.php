@@ -4,6 +4,13 @@
     <title>CRM PT Smart</title>
 </head>
 <body>
+    @if(Auth::user()->role === 'manager')
+        <h1>Halo Bos!</h1>
+    @endif
+
+    @if(Auth::user()->role !== 'manager')
+        <h1>Halo Sales!</h1>
+    @endif
 
     <h2>CRM PT Smart</h2>
     <h1>Selamat Datang, {{ Auth::user()->name }}!</h1>
